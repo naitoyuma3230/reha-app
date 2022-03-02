@@ -4,7 +4,6 @@ import Users from "../pages/Users.vue";
 import About from "../pages/About.vue";
 import Home from "../pages/Home.vue";
 import User from "../pages/User.vue";
-import UserPost from "../pages/UserPost.vue";
 
 Vue.use(VueRouter);
 
@@ -19,11 +18,7 @@ const routes = [
     nmae: "Users",
     component: Users,
   },
-  {
-    path: "/userpost",
-    name: "UserPost",
-    component: UserPost,
-  },
+
   {
     path: "/user/:id",
     name: "User",

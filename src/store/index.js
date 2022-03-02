@@ -15,7 +15,19 @@ export default new Vuex.Store({
           password: "",
           goal: "Storeのダミーデータ",
           comment: "Axiosでhttpリクエスト",
-          menu: ["筋トレ", "持久力", "減量"],
+          baseMenu: ["筋トレ", "持久力", "減量"],
+          ability: {
+            data1: 20,
+            data2: 30,
+            data3: 60,
+            data4: 18,
+            data5: 15,
+          },
+          schedule:{
+            day:[],
+            dayMenu:[],
+            trainer:"",
+          }
         },
         {
           id: 2,
@@ -23,9 +35,16 @@ export default new Vuex.Store({
           kana: "ふじいそうた",
           password: "",
           goal: "将棋で戦い抜く体力が欲しい",
-          menu: ["持久力", "筋力"],
           comment:
             "将棋が得意だが体力が少ないので、基礎トレーニングから行いたい",
+          baseMenu: ["持久力", "筋力"],
+          ability: {
+            data1: 10,
+            data2: 30,
+            data3: 5,
+            data4: 10,
+            data5: 10,
+          },
         },
         {
           id: 3,
@@ -33,8 +52,15 @@ export default new Vuex.Store({
           kana: "おおたにしょうへい",
           password: "",
           goal: "球速を上げたい",
-          menu: ["持久力"],
           comment: "",
+          baseMenu: ["持久力"],
+          ability: {
+            data1: 80,
+            data2: 90,
+            data3: 80,
+            data4: 90,
+            data5: 100,
+          },
         },
         {
           id: 4,
@@ -42,8 +68,15 @@ export default new Vuex.Store({
           kana: "ほんだけいすけ",
           password: "",
           goal: "年齢と共に走力の衰え",
-          menu: ["瞬発力"],
+          baseMenu: ["瞬発力"],
           comment: "瞬発力向上のトレーニングを行いたい",
+          ability: {
+            data1: 60,
+            data2: 70,
+            data3: 70,
+            data4: 80,
+            data5: 80,
+          },
         },
       ],
       trainers: [

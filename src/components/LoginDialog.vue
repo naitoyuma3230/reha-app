@@ -6,19 +6,20 @@
         <v-btn color="primary" dark v-bind="attrs" v-on="on"> ログイン </v-btn>
       </template>
       <v-card>
-        <v-tabs class="bg-primary">
+        <v-tabs class="bg-primary" v-model="tab">
           <v-tab @click="activeTab = 1">新規登録</v-tab>
           <v-tab @click="activeTab = 2">ログイン</v-tab>
         </v-tabs>
-        <SigninTab
-          v-show="activeTab === 1"
-          :parentTrainer="parentTrainer"
-          @setChildTrainer="setChildTrainer"
-          :parentUser="parentUser"
-          @setChildUser="setChildUser"
-          @childTabchoice="childTabchoice"
-        ></SigninTab>
-        <LoginTab v-show="activeTab === 2"></LoginTab>
+
+          <SigninTab
+            v-show="activeTab === 1"
+            :parentTrainer="parentTrainer"
+            @setChildTrainer="setChildTrainer"
+            :parentUser="parentUser"
+            @setChildUser="setChildUser"
+            @childTabchoice="childTabchoice"
+          ></SigninTab>
+          <LoginTab v-show="activeTab === 2"></LoginTab>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="dialog = false"> キャンセル </v-btn>
@@ -45,12 +46,13 @@
   </v-row>
 </template>
 <script>
-import LoginTab from "./LoginTab.vue";
-import SigninTab from "./SigninTab.vue";
+import LoginTab from "./LoginTab";
+import SigninTab from "./SigninTab";
 
 export default {
   data() {
     return {
+      tab:null,
       dialog: false,
       activeTab: 1,
       childTab: 0,

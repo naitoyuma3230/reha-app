@@ -7,18 +7,14 @@
           <v-col cols="12" md="4">
             <v-text-field
               v-model="user.name"
-              :counter="10"
               label="お名前"
-              required
             ></v-text-field>
           </v-col>
 
           <v-col cols="12" md="4">
             <v-text-field
               v-model="user.kana"
-              :counter="20"
               label="ひらがな"
-              required
             ></v-text-field>
           </v-col>
 
@@ -26,7 +22,6 @@
             <v-text-field
               v-model="user.goal"
               label="目標"
-              required
             ></v-text-field>
           </v-col>
 
