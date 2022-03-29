@@ -10,16 +10,21 @@
           <v-tab @click="activeTab = 1">新規登録</v-tab>
           <v-tab @click="activeTab = 2">ログイン</v-tab>
         </v-tabs>
-
-          <SigninTab
-            v-show="activeTab === 1"
-            :parentTrainer="parentTrainer"
-            @setChildTrainer="setChildTrainer"
-            :parentUser="parentUser"
-            @setChildUser="setChildUser"
-            @childTabchoice="childTabchoice"
-          ></SigninTab>
-          <LoginTab v-show="activeTab === 2"></LoginTab>
+        <v-tabs-items v-model="tab">
+          <v-tab-item transition="fade-transition">
+            <SigninTab
+              v-show="activeTab === 1"
+              :parentTrainer="parentTrainer"
+              @setChildTrainer="setChildTrainer"
+              :parentUser="parentUser"
+              @setChildUser="setChildUser"
+              @childTabchoice="childTabchoice"
+            ></SigninTab>
+          </v-tab-item>
+          <v-tab-item transition="fade-transition">
+            <LoginTab v-show="activeTab === 2"></LoginTab>
+          </v-tab-item>
+        </v-tabs-items>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="dialog = false"> キャンセル </v-btn>
@@ -52,7 +57,7 @@ import SigninTab from "./SigninTab";
 export default {
   data() {
     return {
-      tab:null,
+      tab: null,
       dialog: false,
       activeTab: 1,
       childTab: 0,

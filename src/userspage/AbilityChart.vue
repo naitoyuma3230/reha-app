@@ -23,7 +23,7 @@ export default {
         labels: ["data1", "data2", "data3", "data4", "data5"],
         datasets: [
           {
-            label: "My First Dataset",
+            label: "ストアのデータ",
             data: [
               this.ability.data1,
               this.ability.data2,
@@ -40,7 +40,7 @@ export default {
             pointHoverBorderColor: "rgb(255, 99, 132)",
           },
           {
-            label: "My Second Dataset",
+            label: "固定値",
             data: [80, 70, 60, 40, 100],
             fill: true,
             backgroundColor: "rgba(54, 162, 235, 0.2)",
@@ -55,7 +55,7 @@ export default {
     };
   },
   mounted() {
-      this.renderChart(this.data, this.config);
+    this.renderChart(this.data, this.config);
   },
 };
 </script>
