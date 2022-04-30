@@ -16,15 +16,15 @@
 				<v-card>
 					<v-card-actions class="align-center">
 						<v-spacer></v-spacer>
+						<v-btn class="mx-2" fab dark x-small elevation="1" color="primary">
+							<font-awesome-icon class="icons-style" icon="fa-solid fa-pen" />
+						</v-btn>
 						<v-btn class="mx-2" fab dark x-small elevation="1" color="error">
 							<font-awesome-icon
 								class="icons-style"
 								icon="fa-solid fa-trash-can"
 								@click="deleteUserById(id)"
 							/>
-						</v-btn>
-						<v-btn class="mx-2" fab dark x-small elevation="1" color="primary">
-							<font-awesome-icon class="icons-style" icon="fa-solid fa-pen" />
 						</v-btn>
 						<v-btn
 							class="mx-2"

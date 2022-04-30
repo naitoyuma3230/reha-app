@@ -499,5 +499,10 @@ export default new Vuex.Store({
 		getUsers(state) {
 			return state.users;
 		},
+		getUserById(state, payload) {
+			return state.users.filter((user) => {
+				return user.id === payload;
+			});
+		},
 	},
 });
